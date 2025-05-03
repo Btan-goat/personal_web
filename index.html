@@ -59,7 +59,7 @@
                 <div>
                     <!-- Circle for Picture -->
                     <div class="profile mx-auto mb-4">
-                        <img src="/images/myPic.jpg" alt="Profile Picture" class="img-fluid">
+                        <img src="/images/sigma.jpg" alt="Profile Picture" class="img-fluid">
                     </div>
                     <!-- Information Text -->
                     <div>
@@ -95,32 +95,73 @@
             </section>
 
             <!-- About Section -->
-            <section class="about-section container my-5 position-relative">
-                <div class="container-about">
-                    <!-- Buttons in Top-Right -->
-                    <div class="button-container position-absolute top-0 end-0 mt-3 me-3">
-                        <button class="btn btn-primary mb-2">Button 1</button>
-                        <button class="btn btn-secondary mb-2">Button 2</button>
-                        <button class="btn btn-success">Button 3</button>
-                    </div>
-
-                    <!-- Second Container: Contains Picture and Information -->
-                    <div class="info-container d-flex flex-column flex-md-row align-items-center text-center">
-                        <!-- Space for Picture -->
-                        <div class="picture-container mb-4 mb-md-0 me-md-4">
-                            <img src="/images/myPic.jpg" alt="About Picture" class="img-fluid rounded-circle" style="width: 200px; height: 200px;">
+            <section class="about-section card container my-5">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- About Me Static Section -->
+                        <div class="row align-items-center mb-4">
+                        <!-- Left Column: Picture -->
+                        <div class="picture col-md-4 text-center mb-3 mb-md-0">
+                            <img src="images/myPic.jpg" alt="Profile Picture" class="img-fluid rounded-circle" style="max-width: 150px;">
                         </div>
-                        <!-- Space for Information -->
-                        <div class="info-text">
+                
+                        <!-- Right Column: About Text -->
+                        <div class="col-md-8">
                             <h2>About Me</h2>
                             <p>
-                                I am Benedict James M. Tan, a passionate IT student dedicated to learning and growing in the tech industry. 
-                                My journey is driven by curiosity and the desire to create solutions that make a difference.
+                            I'm a passionate developer with experience in building minimalist and functional websites.
+                            I enjoy turning complex problems into simple, beautiful, and intuitive designs.
                             </p>
+                        </div>
+                        </div>
+                
+                        <!-- Buttons Row -->
+                        <div class="row justify-content-center mb-4">
+                        <div class="col-md-6 d-flex justify-content-between flex-wrap gap-2">
+                            <button class="btn btn-primary" onclick="changeContent('skills')">Skills</button>
+                            <button class="btn btn-secondary" onclick="changeContent('education')">Education</button>
+                            <button class="btn btn-dark" onclick="changeContent('hobbies')">Hobbies</button>
+                        </div>
+                        </div>
+                
+                        <!-- Info Display Column -->
+                        <div class="row">
+                        <div class="col-12 info-container">
+                            <div id="aboutContent">
+                            <!-- Dynamic content will be inserted here via JS -->
+                            <p>Select a button above to see more information.</p>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
+  
+                <!-- Link to External JS File -->
+                <script src="script.js"></script>
+
             </section>
+  
+            <!-- Projects Section -->
+            <section>
+                <div class="projects-section">
+
+                </div>
+            </section>
+  
+            <!-- Services Section -->
+             <section class="services-section">
+                <div class="row">
+                    <div class="col-1">
+
+                    </div>
+                    <div class="col-2">
+
+                    </div>
+                    <div class="col-3">
+                        
+                    </div>
+                </div>
+             </section>
 
         </body>
         

@@ -235,12 +235,38 @@ body {
     box-shadow: 0 0 0 0 black;
 }
 
-.container-about {
+.about-section {
+    width: 100%;
+    height: auto;
     border-radius: 30px;
     background: #212121;
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
                 -15px -15px 30px rgb(60, 60, 60);
-    margin: 2rem auto;
+    color: #fff; /* Optional: makes text readable on dark background */
+    padding: 2rem; /* Optional: spacing inside the card */
 }
 
-   
+.info-container {
+    border-radius: 30px;
+    background: gray;
+    color: #fff; /* Optional: makes text readable on dark background */
+    padding: 20px;
+}
+  
+  .info-skills ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    color: #4caf50;
+  }
+  
+  .info-education {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  .info-hobbies li {
+    color: #ffc107;
+    font-weight: bold;
+  }
+  
