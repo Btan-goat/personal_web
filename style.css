@@ -242,9 +242,6 @@ body {
     box-shadow: 0 25px 50px rgba(0,0,0,0.55);
     color: #fff; /* Optional: makes text readable on dark background */
     padding: 2rem; /* Optional: spacing inside the card */
-}
-
-.about-section {
     margin-top: 200px;
 }
 
@@ -520,4 +517,120 @@ body {
     }
 }
 
+.services-section {
+    width: 100%;
+    height: auto;
+    display: flex; /* Add flexbox */
+    flex-direction: column; /* Align children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+}
 
+.services-h2 {
+    font-weight: bold;
+    color: #FFC107;
+    margin-bottom: 60px; /* Add spacing between heading and container */
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 1rem;
+}
+  
+.services-container .glass {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column; /* stack icon + text vertically */
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+    padding: 1rem; /* ensure spacing inside */
+    text-align: center;
+}
+
+.services-container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 10px;
+}
+
+.services-container .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.services-container .glass svg {
+    font-size: 2.5em;
+    fill: #fff;
+    margin-bottom: 0.5rem; /* space between icon and text */
+}
+
+.service-desc {
+    font-size: 0.75rem;
+    color: #ccc;
+    margin-top: 0.25rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    /* On smaller screens, adjust the width and spacing */
+    .services-container .glass {
+        width: 250px; /* Make cards smaller */
+        height: 250px;
+    }
+    
+    /* Stack items vertically */
+    .services-container {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .services-section {
+        padding: 2rem 0;
+    }
+
+    .services-container .glass svg {
+        font-size: 2em; /* Adjust icon size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* On even smaller screens, adjust further */
+    .services-container .glass {
+        width: 200px; /* Further reduce card size */
+        height: 200px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        gap: 1.5rem; /* Adjust vertical gap between cards */
+        align-items: center;
+    }
+
+    .services-container .glass svg {
+        font-size: 1.8em; /* Reduce icon size even more */
+    }
+
+    .services-container .glass .service-desc {
+        font-size: 0.7rem; /* Reduce text size */
+    }
+}  
