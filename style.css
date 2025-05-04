@@ -81,8 +81,6 @@ body {
     object-fit: cover;  /* Ensures the image fills the circle */
 }
 
-
-
 /* Flexbox for centering and aligning text with icons */
 .first-section {
     display: flex;
@@ -212,61 +210,314 @@ body {
     color: #fff;
 }
 
-.btn-more {
-    background-color: #FFC107; /* Orange color */
-    color: white; /* White text */
-    border-radius: 10em;
+.btn {
+    color: #ecf0f1;
     font-size: 17px;
-    font-weight: 600;
-    padding: 1em 2em;
+    background-color: #FFC107;
+    border: 1px solid #f39c12;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid #FF5722; /* Orange border to match the button color */
-    box-shadow: 0 0 0 0 black;
+    padding: 10px 20px;
+    box-shadow: 0px 6px 0px #d35400;
+    transition: all 0.1s;
 }
-  
-.btn-more:hover {
-    transform: translateY(-4px) translateX(-2px);
-    box-shadow: 2px 5px 0 0 black;
-}
-  
-.btn-more:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 black;
+
+.btn:hover {
+    background-color: #d35400; /* A darker orange shade for hover */
+    color: #ffffff;            /* Keeps text readable */
+}  
+
+.btn:active {
+    box-shadow: 0px 2px 0px #d35400;
+    position: relative;
+    top: 2px;
 }
 
 .about-section {
     width: 100%;
     height: auto;
-    border-radius: 30px;
     background: #212121;
-    box-shadow: 15px 15px 30px rgb(25, 25, 25),
-                -15px -15px 30px rgb(60, 60, 60);
+    border-radius: 20px;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
     color: #fff; /* Optional: makes text readable on dark background */
     padding: 2rem; /* Optional: spacing inside the card */
 }
 
+.about-section {
+    margin-top: 200px;
+}
+
+.about-h2 {
+    font-weight: bold;
+    color: #FFC107;
+}
+
+.about-profile {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;  /* Ensures the image stays inside the circle */
+    border: 3px solid #FFC107; /* Optional: adds a border around the circle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+.about-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* This ensures the image fills the circle */
+    display: block;     /* Removes any extra spacing under the image */
+} 
+
 .info-container {
     border-radius: 30px;
-    background: gray;
-    color: #fff; /* Optional: makes text readable on dark background */
+    background: rgba(128, 128, 128, 0.2); /* semi-transparent gray */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.info-title {
+    text-align: center;
+    font-weight: bold;
+    color: #FFC107;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+.skill-box {
+    width: 100px;
+    height: 100px;
+    background: rgb(223, 225, 235);
+    border-radius: 50px;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    box-shadow:
+      rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    flex: 1 1 30%; /* Ensure 3 items per row */
+    overflow-wrap: break-word; /* Ensure long words wrap */
+    word-wrap: break-word; /* Support for older browsers */
+    overflow: hidden; /* Prevent content overflow */
+    padding: 10px; /* Add padding to avoid text touching the edges */
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .skill-box {
+        flex: 1 1 45%; /* 2 items per row for smaller screens */
+        font-size: 50px; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-box {
+        flex: 1 1 100%; /* 1 item per row for very small screens */
+        font-size: 40px; /* Further reduce font size for very small screens */
+    }
+}
+
+.education-item {
+    height: 100%;
+    padding: 30px;
+    border-radius: 1.25rem;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    box-shadow:
+      rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: transform 0.3s ease;
+    text-align: center;
 }
   
-  .info-skills ul {
-    list-style-type: square;
-    padding-left: 1.5rem;
-    color: #4caf50;
-  }
+.education-item:hover {
+    transform: translateY(-5px);
+}
   
-  .info-education {
-    background-color: #2a2a2a;
-    padding: 1rem;
-    border-radius: 10px;
-  }
+.education-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 15px;
+}
   
-  .info-hobbies li {
-    color: #ffc107;
+.education-item h4,
+.education-item p {
+    color: white;
+    margin: 0;
+}
+  
+.hobby-item {
+    height: 100%;
+    padding: 30px;
+    border-radius: 1.25rem;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    box-shadow:
+      rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.hobby-item:hover {
+    transform: translateY(-5px);
+}
+  
+.hobby-item img {
+    width: 249px;           /* Same size as education images */
+    height: 249px;
+    object-fit: cover;      /* Maintains aspect ratio */
+    border-radius: 0.75rem;
+    margin-bottom: 15px;
+}
+  
+.hobby-item h4 {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+
+.projects-section {
+    padding: 40px 20px;
+    max-width: 1350px;
+    margin: 200px auto;
+}
+
+.project-item {
+    background: #f8fbfe;
+    border-radius: 20px;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-item h4 {
+    color: #FFC107;
     font-weight: bold;
-  }
-  
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.project-flip-wrapper {
+    perspective: 1000px;
+    width: 100%;
+    height: 420px; /* Set a fixed height that fits the image + text */
+    position: relative;
+}
+
+.project-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.project-flip-wrapper:hover .project-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.project-item.project-front,
+.project-item.project-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-item.project-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(170deg, #1f1f1f 0%, #3a3838 100%);
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 768px) {
+    .project-item img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-item img {
+        height: 150px;
+    }
+}
+
+
