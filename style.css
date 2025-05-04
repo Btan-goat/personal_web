@@ -2,6 +2,14 @@ body {
     background-color: #1E1F23;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 /* Navbar container */
@@ -32,7 +40,7 @@ body {
 
 /* Hover effect */
 .navbar .navbar-nav .nav-link:hover {
-    color: #FFC107; /* Example highlight color (gold) */
+    color: #FFC107; 
 }
 
 /* Smooth underline animation */
@@ -41,41 +49,23 @@ body {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #FFC107; /* Same as hover color */
-    left: 0; /* Start underline from the left edge */
-    bottom: 0; /* Align underline at the bottom */
+    background-color: #FFC107; 
+    left: 0; 
+    bottom: 0; 
     transition: width 0.3s ease-in-out;
 }
 
 .navbar .navbar-nav .nav-link:hover::after {
-    width: 100%; /* Expand underline to full width */
+    width: 100%; 
 }
 
 .navbar-toggler {
-    border: 1px solid white; /* White border for the button */
+    border: 1px solid white; 
 }
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    /* Custom white icon for the toggler */
-}
-
-/* Section styling */
-section {
-    display: none; /* Hide all sections by default */
-    padding: 100px 20px; /* Add padding for visibility */
-    max-width: 1200px;
-    margin: 100px auto;
-}
-
-/* Show the targeted section */
-section:target {
-    display: block;
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
+    
 }
 
 /* Make the name bold */
@@ -87,16 +77,16 @@ html {
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    overflow: hidden;  /* Ensures the image stays inside the circle */
-    border: 3px solid #FFC107; /* Optional: adds a border around the circle */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    overflow: hidden;  
+    border: 3px solid #FFC107; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     margin-left: -90px;
 }
 
 .profile img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Ensures the image fills the circle */
+    object-fit: cover;  
 }
 
 /* Social icons container */
@@ -161,7 +151,7 @@ html {
     width: 8px;
     background: #fff;
     bottom: -3px;
-    left: 50%;
+    left: 13%;
     transform: translate(-50%) rotate(45deg);
     transition: all 0.3s ease;
 }
@@ -197,15 +187,15 @@ html {
 
 /* GitHub */
 .wrapper .github:hover {
-    background: #333; /* GitHub's official black color */
+    background: #333; 
 }
 .wrapper .github:hover svg {
-    color: #fff; /* White color for the icon */
+    color: #fff; 
 }
 .wrapper .github:hover .tooltip,
 .wrapper .github:hover .tooltip::before {
-    background: #333; /* Matches GitHub's black */
-    color: #fff; /* White text for the tooltip */
+    background: #333;
+    color: #fff; 
 }
 
 /* Instagram */
@@ -234,8 +224,8 @@ html {
 }
 
 .btn:hover {
-    background-color: #d35400 !important; /* A darker orange shade for hover */
-    color: #ffffff;            /* Keeps text readable */
+    background-color: #d35400 !important; 
+    color: #ffffff;           
 }  
 
 .btn:active {
@@ -251,8 +241,9 @@ html {
     border-radius: 20px;
     background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
     box-shadow: 0 25px 50px rgba(0,0,0,0.55);
-    color: #fff; /* Optional: makes text readable on dark background */
-    padding: 2rem; /* Optional: spacing inside the card */
+    color: #fff; 
+    padding: 2rem; 
+    margin-top: 200px;
 }
 
 .about-h2 {
@@ -264,21 +255,21 @@ html {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    overflow: hidden;  /* Ensures the image stays inside the circle */
-    border: 3px solid #FFC107; /* Optional: adds a border around the circle */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    overflow: hidden;  
+    border: 3px solid #FFC107; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .about-profile img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* This ensures the image fills the circle */
-    display: block;     /* Removes any extra spacing under the image */
+    object-fit: cover;  
+    display: block;     
 } 
 
 .info-container {
     border-radius: 30px;
-    background: rgba(128, 128, 128, 0.2); /* semi-transparent gray */
+    background: rgba(128, 128, 128, 0.2); 
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -311,33 +302,25 @@ html {
 .skill-box {
     width: 100px;
     height: 100px;
-    background: rgb(223, 225, 235);
-    border-radius: 50px;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    box-shadow:
-      rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-      rgba(0, 0, 0, 0.06) 0px 2px 1px,
-      rgba(0, 0, 0, 0.09) 0px 4px 2px,
-      rgba(0, 0, 0, 0.09) 0px 8px 4px,
-      rgba(0, 0, 0, 0.09) 0px 16px 8px,
-      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background: #212121;
+    border-radius: 20px;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     font-weight: bold;
-    color: #000;
+    color: #ffff;
     text-align: center;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
-    flex: 1 1 30%; /* Ensure 3 items per row */
-    overflow-wrap: break-word; /* Ensure long words wrap */
-    word-wrap: break-word; /* Support for older browsers */
-    overflow: hidden; /* Prevent content overflow */
-    padding: 10px; /* Add padding to avoid text touching the edges */
+    flex: 1 1 30%; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+    overflow: hidden; 
+    padding: 10px; 
 }
 
 .skill-box:hover {
@@ -346,33 +329,25 @@ html {
 
 @media (max-width: 768px) {
     .skill-box {
-        flex: 1 1 45%; /* 2 items per row for smaller screens */
-        font-size: 50px; /* Reduce font size for smaller screens */
+        flex: 1 1 45%;
+        font-size: 50px; 
     }
 }
 
 @media (max-width: 480px) {
     .skill-box {
-        flex: 1 1 100%; /* 1 item per row for very small screens */
-        font-size: 40px; /* Further reduce font size for very small screens */
+        flex: 1 1 100%; 
+        font-size: 40px; 
     }
 }
 
 .education-item {
     height: 100%;
     padding: 30px;
-    border-radius: 1.25rem;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    box-shadow:
-      rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-      rgba(0, 0, 0, 0.06) 0px 2px 1px,
-      rgba(0, 0, 0, 0.09) 0px 4px 2px,
-      rgba(0, 0, 0, 0.09) 0px 8px 4px,
-      rgba(0, 0, 0, 0.09) 0px 16px 8px,
-      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background: #212121;
+    border-radius: 20px;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
     transition: transform 0.3s ease;
     text-align: center;
 }
@@ -389,7 +364,11 @@ html {
     margin-bottom: 15px;
 }
   
-.education-item h4,
+.education-item h4{
+    color: #FFC107;
+    font-weight: bold;
+}
+
 .education-item p {
     color: white;
     margin: 0;
@@ -398,18 +377,10 @@ html {
 .hobby-item {
     height: 100%;
     padding: 30px;
-    border-radius: 1.25rem;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    box-shadow:
-      rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-      rgba(0, 0, 0, 0.06) 0px 2px 1px,
-      rgba(0, 0, 0, 0.09) 0px 4px 2px,
-      rgba(0, 0, 0, 0.09) 0px 8px 4px,
-      rgba(0, 0, 0, 0.09) 0px 16px 8px,
-      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background: #212121;
+    border-radius: 20px;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -422,9 +393,9 @@ html {
 }
   
 .hobby-item img {
-    width: 249px;           /* Same size as education images */
+    width: 249px;         
     height: 249px;
-    object-fit: cover;      /* Maintains aspect ratio */
+    object-fit: cover;     
     border-radius: 0.75rem;
     margin-bottom: 15px;
 }
@@ -438,7 +409,7 @@ html {
 .projects-section {
     padding: 40px 20px;
     max-width: 1350px;
-    margin: 0px auto;
+    margin: 200px auto;
 }
 
 .project-item {
@@ -476,7 +447,7 @@ html {
 .project-flip-wrapper {
     perspective: 1000px;
     width: 100%;
-    height: 420px; /* Set a fixed height that fits the image + text */
+    height: 420px; 
     position: relative;
 }
 
@@ -530,25 +501,23 @@ html {
 .services-section {
     width: 100%;
     height: auto;
-    display: flex; /* Add flexbox */
-    flex-direction: column; /* Align children vertically */
-    justify-content: center; /* Center children vertically */
-    align-items: center; /* Center children horizontally */
-    margin-bottom: 180px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
 }
 
 .services-h2 {
     font-weight: bold;
-    text-align: center;
     color: #FFC107;
-    margin-bottom: 60px; /* Add spacing between heading and container */
+    margin-bottom: 60px; 
 }
 
 .services-container {
     display: flex;
     justify-content: space-around;
     gap: 1rem;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap; 
     padding: 1rem;
 }
   
@@ -560,7 +529,7 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
     display: flex;
-    flex-direction: column; /* stack icon + text vertically */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     transition: 0.5s;
@@ -568,7 +537,7 @@ html {
     margin: 0 -45px;
     backdrop-filter: blur(10px);
     transform: rotate(calc(var(--r) * 1deg));
-    padding: 1rem; /* ensure spacing inside */
+    padding: 1rem; 
     text-align: center;
 }
 
@@ -593,7 +562,7 @@ html {
 .services-container .glass svg {
     font-size: 2.5em;
     fill: #fff;
-    margin-bottom: 0.5rem; /* space between icon and text */
+    margin-bottom: 0.5rem; 
 }
 
 .service-desc {
@@ -604,13 +573,13 @@ html {
 }
 
 @media (max-width: 768px) {
-    /* On smaller screens, adjust the width and spacing */
+    
     .services-container .glass {
-        width: 250px; /* Make cards smaller */
+        width: 250px; 
         height: 250px;
     }
     
-    /* Stack items vertically */
+    
     .services-container {
         justify-content: center;
         gap: 2rem;
@@ -621,29 +590,29 @@ html {
     }
 
     .services-container .glass svg {
-        font-size: 2em; /* Adjust icon size for smaller screens */
+        font-size: 2em; 
     }
 }
 
 @media (max-width: 480px) {
-    /* On even smaller screens, adjust further */
+    
     .services-container .glass {
-        width: 200px; /* Further reduce card size */
+        width: 200px; 
         height: 200px;
     }
 
     .services-container {
         flex-direction: column;
-        gap: 1.5rem; /* Adjust vertical gap between cards */
+        gap: 1.5rem; 
         align-items: center;
     }
 
     .services-container .glass svg {
-        font-size: 1.8em; /* Reduce icon size even more */
+        font-size: 1.8em; 
     }
 
     .services-container .glass .service-desc {
-        font-size: 0.7rem; /* Reduce text size */
+        font-size: 0.7rem; 
     }
 }  
 
@@ -652,9 +621,10 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Full screen height */
+    min-height: 100vh; 
     padding: 2rem;
     text-align: center;
+    margin-top: 200px;
 }  
 
 .contact-h2 {
@@ -726,7 +696,6 @@ html {
     fill: #fff;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
@@ -737,4 +706,8 @@ html {
     .contact-info {
         max-width: 100%;
     }
+}
+
+footer {
+    text-align: center;
 }
