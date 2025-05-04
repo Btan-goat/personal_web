@@ -29,7 +29,6 @@ A clean and modern personal website built using **HTML**, **CSS (custom + Bootst
 
 ## ⚙️ Setup Instructions
 
-```bash
 # 1. Download or clone the repository
 git clone https://github.com/yourusername/minimalist-portfolio.git
 
