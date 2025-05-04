@@ -29,16 +29,16 @@ A clean and modern personal website built using **HTML**, **CSS (custom + Bootst
 
 ## ⚙️ Setup Instructions
 
-- 1. Download or clone the repository
-git clone https://github.com/yourusername/minimalist-portfolio.git
+1. Download or clone the repository
+git clone https://github.com/Btan-goat/personal_web.git
 
-- 2. Navigate into the project folder
+2. Navigate into the project folder
 cd minimalist-portfolio
 
-- 3. Open index.html in your browser
+3. Open index.html in your browser
 (Double-click the file or use a live server like VS Code's Live Server extension)
 
-- 4. Customize content
+4. Customize content
 Edit text/images in index.html and update styles in css/style.css
 
 
