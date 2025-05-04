@@ -22,21 +22,21 @@ function changeContent(section) {
           <div class="row">
               <div class="col-md-4 mb-4"> <!-- Added mb-4 for spacing -->
                   <div class="education-item">
-                      <img src="/images/aes.jpg" alt="Image 1" class="img-fluid">
+                      <img src="images/aes.jpg" alt="Image 1" class="img-fluid">
                       <h4>Primary Education</h4>
                       <p>Aninuan Elementary School</p>
                   </div>
               </div>
               <div class="col-md-4 mb-4"> <!-- Added mb-4 for spacing -->
                   <div class="education-item">
-                      <img src="/images/pga.jpg" alt="Image 2" class="img-fluid">
+                      <img src="images/pga.jpg" alt="Image 2" class="img-fluid">
                       <h4>Secondary Education</h4>
                       <p>Puerto Galera Academy</p>
                   </div>
               </div>
               <div class="col-md-4 mb-4"> <!-- Added mb-4 for spacing -->
                   <div class="education-item">
-                      <img src="/images/nulp.jpg" alt="Image 3" class="img-fluid">
+                      <img src="images/nulp.jpg" alt="Image 3" class="img-fluid">
                       <h4>Tertiary Education</h4>
                       <p>National University Lipa</p>
                   </div>
