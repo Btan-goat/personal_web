@@ -60,6 +60,24 @@ body {
     /* Custom white icon for the toggler */
 }
 
+/* Section styling */
+section {
+    display: none; /* Hide all sections by default */
+    padding: 100px 20px; /* Add padding for visibility */
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+/* Show the targeted section */
+section:target {
+    display: block;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Make the name bold */
 .name {
     font-weight: bold;
@@ -79,13 +97,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;  /* Ensures the image fills the circle */
-}
-
-/* Flexbox for centering and aligning text with icons */
-.first-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 /* Social icons container */
@@ -184,17 +195,17 @@ body {
     color: #fff;
 }
 
-/* Twitter */
-.wrapper .twitter:hover {
-    background: #1da1f2;
+/* GitHub */
+.wrapper .github:hover {
+    background: #333; /* GitHub's official black color */
 }
-.wrapper .twitter:hover svg {
-    color: #fff;
+.wrapper .github:hover svg {
+    color: #fff; /* White color for the icon */
 }
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-    background: #1da1f2;
-    color: #fff;
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #333; /* Matches GitHub's black */
+    color: #fff; /* White text for the tooltip */
 }
 
 /* Instagram */
@@ -213,22 +224,22 @@ body {
 .btn {
     color: #ecf0f1;
     font-size: 17px;
-    background-color: #FFC107;
+    background-color: #FFC107 !important; 
     border: 1px solid #f39c12;
     border-radius: 5px;
     cursor: pointer;
     padding: 10px 20px;
-    box-shadow: 0px 6px 0px #d35400;
+    box-shadow: 0px 6px 0px #d35400 !important;
     transition: all 0.1s;
 }
 
 .btn:hover {
-    background-color: #d35400; /* A darker orange shade for hover */
+    background-color: #d35400 !important; /* A darker orange shade for hover */
     color: #ffffff;            /* Keeps text readable */
 }  
 
 .btn:active {
-    box-shadow: 0px 2px 0px #d35400;
+    box-shadow: 0px 2px 0px #d35400 !important;
     position: relative;
     top: 2px;
 }
@@ -242,7 +253,6 @@ body {
     box-shadow: 0 25px 50px rgba(0,0,0,0.55);
     color: #fff; /* Optional: makes text readable on dark background */
     padding: 2rem; /* Optional: spacing inside the card */
-    margin-top: 200px;
 }
 
 .about-h2 {
@@ -428,7 +438,7 @@ body {
 .projects-section {
     padding: 40px 20px;
     max-width: 1350px;
-    margin: 200px auto;
+    margin: 0px auto;
 }
 
 .project-item {
@@ -524,10 +534,12 @@ body {
     flex-direction: column; /* Align children vertically */
     justify-content: center; /* Center children vertically */
     align-items: center; /* Center children horizontally */
+    margin-bottom: 180px;
 }
 
 .services-h2 {
     font-weight: bold;
+    text-align: center;
     color: #FFC107;
     margin-bottom: 60px; /* Add spacing between heading and container */
 }
@@ -634,3 +646,95 @@ body {
         font-size: 0.7rem; /* Reduce text size */
     }
 }  
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full screen height */
+    padding: 2rem;
+    text-align: center;
+}  
+
+.contact-h2 {
+    font-weight: bold;
+    color: #FFC107;
+}
+
+.form-floating {
+    color: #000;
+}
+
+.contact-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.contact-form,
+.contact-info {
+    flex: 1 1 300px;
+    max-width: 500px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+.contact-form button {
+    padding: 0.75rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.contact-info svg {
+    width: 1.2em;
+    height: 1.2em;
+    fill: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form,
+    .contact-info {
+        max-width: 100%;
+    }
+}
