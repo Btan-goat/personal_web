@@ -54,5 +54,5 @@ Edit text/images in index.html and update styles in css/style.css
  
 **Tan, Benedict James M.**  
 - GitHub: [@Btan-goat](https://github.com/Btan-goat)  
-- Facebook: [Profile](https://m.facebook.com/benedictjames.m.tan/)  
+- Facebook: [Profile](https://m.facebook.com/benedictjames.tan.5/)  
 - Instagram : [Profile](https://www.instagram.com/just.nebz/)
